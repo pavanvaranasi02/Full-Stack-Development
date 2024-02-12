@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Day-1 FSD</title>
+        <!-- <link rel="stylesheet" href="Day1.css"> -->
+        <style>
+            h1.day1-h1 {
+                font-size: 80px;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                text-decoration: none;
+                color: seagreen;
+                text-align: center;
+                border: 10px dotted crimson;
+                margin: 0px 0px 30px 0px; /* top right bottom left*/ /* Outside Border */
+                padding: 0px 0px 10px 0px; /* top right bottom left*/ /* Inside Border */
+            }
+            p#day1-p1 {
+                color: tomato;
+                border: 5px dotted darkblue;
+                text-decoration: none;
+                margin: 10px 0px 10px 0px;
+                padding: 10px 0px 10px 50px;
+                font-size: 25px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            img#day1-right-img1 {
+                margin: 0px 0px 0px 0px;
+                float: right;
+                padding: 0px 70px 0px 0px;
+            }
+            img {
+                max-width: 400px;
+                max-height: 400px;
+            }
+            figure {
+                text-align: center;
+                color: burlywood;
+                font-size: 24px;
+            }
+            a#day1-a1 {
+                color: aquamarine;
+                font-size: 150%;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            a#day1-a1:hover {
+                color: powderblue;
+                text-align: left;
+                font-size: 300%;
+            }
+            p#day1-a1-p2 {
+                text-align: center;
+                margin: 0px 0px 0px 0px;
+                padding: 0px 0px 0px 0px;
+            }
+
+            q {
+                color: red; 
+                text-decoration: dotted underline;
+            }
+            q:hover {
+                color: green;
+                text-decoration: solid underline red;
+            }
+            p#day1-p3 {
+                font-size: 120%;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            p#day1-p3 a:hover {
+                color: green;
+            }
+            p#day1-p3:hover {
+                text-align: right;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1 class="day1-h1">Day 1 <abbr title="Hyper Text Markup Lnaguage">HTML</abbr> Basics</h1>
+        <p id="day1-p1">This is a Paragraph     
+            With no extra spaces or line 
+            breaks in between.
+        </p>
+        <p style="font-size: 150%; margin: 0px 0px 10px 0px; text-align: center;">The below image to the right is not having anything in src but has alt</p>
+        <img id="day1-right-img1" src="" alt="No src to show"/>
+        <figure>
+            <img src="https://media.licdn.com/dms/image/D5603AQEZAfHu3vmMcQ/profile-displayphoto-shrink_800_800/0/1688375740530?e=2147483647&v=beta&t=wKkdfFA1VLd77IYXteVY_Y_8DRw7ykcewMCKbcFT9xA" alt="has src"/>
+            <figcaption>Happpy to see me here to the left.</figcaption>
+        </figure>
+        <hr/> 
+        <a id="day1-a1" href="https://www.linkedin.com/in/ns-pavan/" target="_blank" title="Pavan Linkedin"><p id="day1-a1-p2">My Linkedin Profile can be accessed from here</p></a>
+        
+        <hr/>
+        <p style="text-align: right;">This is also right sided Text.</p>
+        <bdo dir="rtl">This is bidirectional text from right to left.</bdo>
+
+        <p>Hi there <q>I am Pavan</q>, and this is a perfect example for using quotes using q tag.</p>
+
+        <p id="day1-p3">You can mail me by clicking <a href="mailto:pavanvaransi2002@gmail.com">here</a></p>
+    </body>
+
+</html>
