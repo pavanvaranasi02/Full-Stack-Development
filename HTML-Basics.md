@@ -180,7 +180,76 @@ With CSS, you can control the color, font, the size of text, the spacing between
 
 **Note:** Always specify an <<code>img</code>> element as the last child element of the <<code>picture</code>> element. The <<code>img</code>> element is used by browsers that do not support the <<code>picture</code>> element, or if none of the <<code>source</code>> tags match.
 
+**HTML Tables:**
+1. HTML tables allow web developers to arrange data into rows and columns.
+2. **Table Rows:** Each table row starts with a <<code>tr</code>> and ends with a <<code>/tr</code>> tag. tr stands for **table row.**
+3. You can have as many rows as you like in a table; just make sure that the number of cells are the same in each row. There are times when a row can have less or more cells than another.
+4. **Table Cells:** Each table cell is defined by a <<code>td</code>> and a <<code>/td</code>> tag. td stands for **table data.**
+5. **Note:** A table cell can contain all sorts of HTML elements: text, images, lists, links, other tables, etc.
+6. **Table Headers:** Sometimes you want your cells to be table header cells. In those cases use the <<code>th</code>> tag instead of the <<code>td</code>> tag: th stands for **table header.**
+7. By default, the text in <<code>th</code>> elements are **bold and centered**, but you can change that with CSS.
+8. HTML tables can have **borders of different styles and shapes**, To add a border, use the CSS border property on table, th, and td elements.
+9. **Collapsed Table Borders:** To avoid having double borders set the CSS **border-collapse property to collapse**.
+    Example:
+         table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+         }
+10. If you set a background color of each cell, and give the border a white color (the same as the document background), you get the impression of an invisible border.
+11. With the **border-radius property**, the borders get rounded corners.
+12. With the **border-style property**, you can set the appearance of the border, below are some examples:
+      **dotted
+      dashed
+      solid
+      double
+      groove
+      ridge
+      inset
+      outset
+      none
+      hidden**
+14. With the **border-color property**, you can set the color of the border.
+15. HTML tables can have different sizes for each column, row or the entire table. Use the <code>style</code> attribute with the <code>width</code> or <code>height</code> properties to specify the size of a table, row or column.
+16. Cell padding is the space between the cell edges and the cell content. By default the padding is set to 0, You can change it using CSS.
+17. Cell spacing is the space between each cell. By default the space is set to 2 pixels. To change the space between table cells, use the CSS border-spacing property on the table element.
+18. HTML tables can have cells that span over multiple rows and/or columns. <br/>
+      To make a cell span over multiple columns, use the <code>colspan attribute.</code> <br/>
+      **Note: The value of the colspan attribute represents the number of columns to span.** <br/>
+      To make a cell span over multiple rows, use the <code>rowspan attribute</code> <br/>
+      **Note: The value of the rowspan attribute represents the number of rows to span.**
+
+Some other useful tags of table are:
+1. <<code>caption</code>> Defines a table caption. <br/>
+Note: The <caption> tag should be inserted immediately after the <table> tag.
+2. <<code>colgroup</code>> Specifies a group of one or more columns in a table for formatting.
+3. <<code>col</code>> Specifies column properties for each column within a <<code>colgroup</code>> element.
+4. <<code>thead</code>> Groups the header content in a table.
+5. <<code>tbody</code>> Groups the body content in a table.
+6. <<code>tfoot</code>> Groups the footer content in a table.
 
 
+**HTML Table - Zebra Stripes, Horizontal Dividers, Hoverable Table:**
+<a href="https://www.w3schools.com/html/html_table_styling.asp" target="_blank"> Visit this page </a> <br/>
 
+**HTML Table Colgroup:**
+<a href="https://www.w3schools.com/html/html_table_colgroup.asp" target="_blank"> Visit this page </a> <br/>
+
+**HTML Lists:**
+1. <<code>ul</code>>	Defines an unordered list (The list items will be marked with bullets (small black circles) by default.) <br/>
+      The list items will be marked with bullets (small black circles) by default:<br/>
+         1. disc	      Sets the list item marker to a bullet (default)
+         2. circle	Sets the list item marker to a circle
+         3. square	Sets the list item marker to a square
+         4. none	      The list items will not be marked
+
+3. <<code>ol</code>>	Defines an ordered list
+4. <<code>li</code>>	Defines a list item
+5. <<code>dl</code>>	Defines a description list
+6. <<code>dt</code>>	Defines a term in a description list
+7. <<code>dd</code>>	Describes the term in a description list
+
+<pre>Note: A list item (<<code>li</code>>) can contain a new list, and other HTML elements, like images and links, etc.</pre>
+
+**Horizontal List with CSS: (for creating nav bars)**
+1. Use the CSS property float:left to display a list horizontally
 
