@@ -165,4 +165,22 @@ With CSS, you can control the color, font, the size of text, the spacing between
 10. Use the CSS **padding** property for space inside the border
 11. Use the CSS **margin** property for space outside the border
 
+# Day-2
+**HTML Images Continuation:**
+1. To add a background image on an HTML element, use the HTML style attribute and the CSS background-image property.
+2. If you want the entire page to have a background image, you must specify the background image on the <body> element.
+3. If the background image is smaller than the element, the image will repeat itself, horizontally and vertically, until it reaches the end of the element.
+4. To avoid the background image from repeating itself, set the background-repeat property to no-repeat.
+5. If you want the background image to cover the entire element, you can set the background-size property to cover.
+6. Also, to make sure the entire element is always covered, set the background-attachment property to fixed, This way, the background image will cover the entire element, with no stretching (the image will keep its original proportions)
+7. If you want the background image to stretch to fit the entire element, you can set the background-size property to 100% 100%, Try resizing the browser window, and you will see that the image will stretch, but always cover the entire element.
+8. The HTML <<code>picture</code>> element allows you to display different pictures for different devices or screen sizes.
+9. The <<code>picture</code>> element contains one or more <<code>source</code>> elements, each referring to different images through the <code>srcset</code> attribute. This way the browser can choose the image that best fits the current view and/or device.
+10. Each <<code>source</code>> element has a <code>media</code> attribute that defines when the image is the most suitable. <br/>
+
+**Note:** Always specify an <<code>img</code>> element as the last child element of the <<code>picture</code>> element. The <<code>img</code>> element is used by browsers that do not support the <<code>picture</code>> element, or if none of the <<code>source</code>> tags match.
+
+
+
+
 
