@@ -234,22 +234,79 @@ Note: The <caption> tag should be inserted immediately after the <table> tag.
 **HTML Table Colgroup:**
 <a href="https://www.w3schools.com/html/html_table_colgroup.asp" target="_blank"> Visit this page </a> <br/>
 
+# Day-3
 **HTML Lists:**
 1. <<code>ul</code>>	Defines an unordered list (The list items will be marked with bullets (small black circles) by default.) <br/>
       The list items will be marked with bullets (small black circles) by default:<br/>
-         1. disc	      Sets the list item marker to a bullet (default)
-         2. circle	Sets the list item marker to a circle
-         3. square	Sets the list item marker to a square
-         4. none	      The list items will not be marked
+         i. disc	      Sets the list item marker to a bullet (default)<br/>
+         ii. circle	Sets the list item marker to a circle<br/>
+         iii. square	Sets the list item marker to a square<br/>
+         iv. none	      The list items will not be marked<br/>
+2. <<code>ol</code>>	Defines an ordered list
+      The type attribute of the <<code>ol</code>> tag, defines the type of the list item marker<br/>
+      type="1"	The list items will be numbered with numbers (default) <br/>
+      type="A"	The list items will be numbered with uppercase letters<br/>
+      type="a"	The list items will be numbered with lowercase letters<br/>
+      type="I"	The list items will be numbered with uppercase roman numbers<br/>
+      type="i"	The list items will be numbered with lowercase roman numbers<br/>
+      By default, an ordered list will start counting from, If you want to start counting from a specified number, you can use the start attribute <br/>
 
-3. <<code>ol</code>>	Defines an ordered list
-4. <<code>li</code>>	Defines a list item
-5. <<code>dl</code>>	Defines a description list
-6. <<code>dt</code>>	Defines a term in a description list
-7. <<code>dd</code>>	Describes the term in a description list
+3. <<code>li</code>>	Defines a list item
+4. <<code>dl</code>>	Defines a description list
+5. <<code>dt</code>>	Defines a term in a description list
+6. <<code>dd</code>>	Describes the term in a description list
 
 <pre>Note: A list item (<<code>li</code>>) can contain a new list, and other HTML elements, like images and links, etc.</pre>
 
 **Horizontal List with CSS: (for creating nav bars)**
-1. Use the CSS property float:left to display a list horizontally
+1. Use the CSS property <code>float:left</code> to display a list horizontally.
+
+**HTML Block and Inline Elements:**
+1. Every HTML element has a default display value, depending on what type of element it is. The two most common display values are **block and inline.**
+2. A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the element. A block-level element always takes up the full width available (stretches out to the left and right as far as it can).
+3. Two commonly used block elements are: <<code>p</code>> and <<code>div</code>>.
+4. An inline element does not start on a new line. An inline element only takes up as much width as necessary.
+5. <<code>span</code>> is the best example of inline elements.
+6. You can check out all block and inline elements <a href="https://www.w3schools.com/html/html_blocks.asp" target="_blank">here</a>.
+7. <pre><strong>Note:</strong> An inline element cannot contain a block-level element!</pre>
+8. The <div> element is a block-level and is often used as a container for other HTML elements.
+9. The <span> element is an inline container used to mark up a part of a text, or a part of a document.
+10. Both inline and block elements have no attributes but we use class, id, and style.
+
+**HTML Div Elements:**
+1. If you have a <<code>div</code>> element that is not 100% wide, and you want to center-align it, set the CSS <code>margin</code> property to **auto.**
+2. Aligning <div> elements side by side: The CSS **<code>float</code>** property is used for positioning and formatting content and allow elements float next to each other instead of on top of each other.
+3. If you change the <<code>div</code>> element's display property from block to <code>display:inline-block</code>, the <<code>div</code>> elements will no longer add a line break before and after, and will be displayed side by side instead of on top of each other.
+4. The CSS Flexbox Layout Module was introduced to make it easier to design flexible responsive layout structure without using float or positioning. <br/>
+To make the CSS flex method work, surround the div elements with another div element and give it the status as a flex container. <br/>
+i.e., in style tag under div use display: flex;
+5. The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning. <br/>
+Sounds almost the same as flex, but has the ability to define more than one row and position each row individually. <br/>
+The CSS grid method requires that you surround the div elements with another div element and give the status as a grid container, and you must specify the width of each column. <br/>
+example: inside of style tag and div it should be like this: <br/>
+      display: grid; <br/>
+      grid-template-columns: 33% 33% 33%; <br/>
+
+**HTML Classes:**
+1. The HTML class attribute specifies one or more class names for an element
+2. Classes are used by CSS and JavaScript to select and access specific elements
+3. The class attribute can be used on any HTML element
+4. The class name is case sensitive
+5. Different HTML elements can point to the same class name
+6. JavaScript can access elements with a specific class name with the getElementsByClassName() method.
+7. To define multiple classes, separate the class names with a space, e.g. <<code>div class="city main"</code>>. The element will be styled according to all the classes specified.
+8. In the following example, the first h2 element belongs to both the city class and also to the main class, and will get the CSS styles from both of the classes
+
+
+**HTML Id:**
+1. The id attribute is used to specify a unique id for an HTML element
+2. The value of the id attribute must be unique within the HTML document
+3. The id attribute is used by CSS and JavaScript to style/select a specific element
+4. The value of the id attribute is case sensitive
+5. The id attribute is also used to create HTML bookmarks
+6. JavaScript can access an element with a specific id with the getElementById() method
+
+
+
+
 
