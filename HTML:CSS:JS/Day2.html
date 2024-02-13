@@ -2,17 +2,226 @@
 <html>
 
     <head>
+        <title>Day-2&3 FSD</title>
         <style>
+            body {
+                width: auto;
+                height: auto;
+                background-color: rgba(255, 255, 255, 0.6);
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 110%;
+            }
 
+            h1#day2-heading1 {
+                border: 2px solid black;
+                margin: 5px;
+                padding: 5px;
+                background-color: cadetblue;
+                text-align: center;
+                color: khaki;
+            }
+
+            ul {
+                border: 3px solid black;
+                padding: 5px 5px 5px 350px;
+                overflow: hidden;
+            }
+
+            ul li {
+                list-style-type: none;
+                float: left;
+                background-color: brown;
+                padding: 10px;
+                margin: 10px;
+            }
+
+            ul li a {
+                color: white;
+                font-size: 105%;
+                text-decoration: none;
+            }
+
+            ul li button {
+                border: none;
+                background-color: brown;
+                font-size: 106%;
+                color: white;
+            }
+
+            ul li:hover, li button:hover {
+                background-color: black;
+            }
+
+            div.day2-img1 {
+                padding: 10px;
+                height: auto;
+                background-color: pink;
+                text-align: center;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 150%;
+            }
+
+            div.day2-img1 img {
+                width: 75px;
+                height: 75px;
+                float: right;
+            }
+
+            div.day2-table1 {
+                background-color: bisque;
+                display: flex;
+                justify-content: center;
+            }
+
+            div.day2-table1 table{
+                margin: 5px;
+                padding: 5px;
+                text-align: center;
+            }
+
+            div.day2-table1 table, td, th {
+                border: 2px solid black;
+                border-collapse: collapse;
+                max-height: auto;
+                overflow: auto;
+            }
+
+            div.day3-div1-side-by-side{
+                display: flex;
+                border: 2px solid black;
+                padding: 5px;
+                margin: 5px;
+                overflow: hidden;
+            }
+
+            div.day3-div1-side-by-side div {
+                margin: 5px;
+                padding: 5px;
+            }
+
+            div.day3-div1-side-by-side div#left-div1 {
+                background-color: powderblue;
+                text-align: center;
+            }
+
+            div.day3-div1-side-by-side div#right-div1 {
+                background-color: coral;
+                text-align: center;
+            }
+
+            div.day3-div2 {
+                border: 2px solid navy;
+                background-color: darkgoldenrod;
+                display: block;
+                margin: 10px;
+                padding: 10px;
+                overflow: hidden;
+            }
+
+            div.day3-img-repeat {
+                width: auto;
+                height: 50px;
+                margin: 5px;
+                padding: 5px;
+                border: 2px solid black;
+                background-color: navajowhite;
+                background-image: url('https://media.licdn.com/dms/image/D5603AQEZAfHu3vmMcQ/profile-displayphoto-shrink_800_800/0/1688375740530?e=2147483647&v=beta&t=wKkdfFA1VLd77IYXteVY_Y_8DRw7ykcewMCKbcFT9xA');
+                /* set background image width and height */
+                background-size: 50px 50px;
+            }
+
+            div.day3-img-no-repeat {
+                width: auto;
+                height: 50px;
+                margin: 5px;
+                padding: 5px;
+                border: 2px solid black;
+                background-color: navajowhite;
+                background-image: url('https://media.licdn.com/dms/image/D5603AQEZAfHu3vmMcQ/profile-displayphoto-shrink_800_800/0/1688375740530?e=2147483647&v=beta&t=wKkdfFA1VLd77IYXteVY_Y_8DRw7ykcewMCKbcFT9xA');
+                background-repeat: no-repeat;
+                /* set background image width and height */
+                background-size: cover;
+            }
 
         </style>
+        <script>
+            function changeBackground() {
+                let color = document.body.style.backgroundColor;
+                let offcolor = "teal";
+                if(color === offcolor) document.body.style.backgroundColor = "white";
+                else document.body.style.backgroundColor = offcolor;
+            }
+        </script>
     </head>
-
-
     <body>
+        <h1 id="day2-heading1"> Day-2&3 HTML </h1>
+        <!-- Nav Bar -->
+        <div>
+            <ul>
+                <li><a href="./Day1.html" target="_blank">Go to Day-1</a></li>
+                <li><a href="https://www.linkedin.com/in/ns-pavan/" target="_blank">My Linkedin</a></li>
+                <li><a href="https://github.com/nagasaipavan1" target="_blank">My Github</a></li>
+                <li><a href="https://leetcode.com/nagasaipavan/" target="_blank">Leetcode Profile</a></li>
+                <li><a href="https://www.codingninjas.com/studio/profile/nagasaipavan" target="_blank">CodingNinja's Profile</a></li>
+                <li><button onclick="changeBackground();">Dark/light Mode</button></li>
+            </ul>
+        </div>
 
+        <!-- div for image. -->
+        <div class="day2-img1"> 
+            <!-- Learning Background repeat of image. -->
+            <img src="https://media.licdn.com/dms/image/D5603AQEZAfHu3vmMcQ/profile-displayphoto-shrink_800_800/0/1688375740530?e=2147483647&v=beta&t=wKkdfFA1VLd77IYXteVY_Y_8DRw7ykcewMCKbcFT9xA" alt="My Photo" title="My Photo"/>
+            <p>This is a div and it is special because it is a block element </p>
+        </div>
 
+        <div class="day2-table1">
+            <table>
+                <caption>Time Table for My Work</caption>
+                <tr>
+                    <th colspan="6">Work Time</th>
+                    <th>Leisure Time</th>
+                </tr>
+                <tr>
+                    <td>6-8</td>
+                    <td rowspan="2" style="width: 25px; padding: 3px;">B<br/>r<br/>e<br/>a<br/>k<br/></td>
+                    <td>9-12</td>
+                    <td rowspan="2" style="width: 25px; padding: 3px;">L<br/>u<br/>n<br/>c<br/>h<br/></td>
+                    <td>2-5</td>
+                    <td rowspan="2" style="width: 25px; padding: 3px;">H<br/>o<br/>b<br/>b<br/>i<br/>e<br/>s<br/></td>
+                    <td>7-9</td>
+                </tr>
+                <tr>
+                    <td>Exercise, Meditation</td>
+                    <td>Office Work</td>
+                    <td>Office Work/sleep/explore</td>
+                    <td>Skill Development</td>
+                </tr>
+            </table>
+        </div>
 
+        <div class="day3-div1-side-by-side">
+            <div id="left-div1"><h3>Div to left</h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur asperiores aliquam neque vel reprehenderit. Laborum at eum unde voluptates quis. Illum soluta suscipit eaque deserunt ipsam repellendus porro recusandae quasi!</div>
+            <div id="right-div1"><h3>Div to Right</h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus vel facilis alias voluptatibus optio iure. Sequi, id obcaecati, provident quibusdam fugit numquam iure maxime molestiae officiis tempora optio ducimus repudiandae.</div>
+        </div>
+        
+        <div class="day3-div2">
+            <h3 style="text-align: center; margin: 0px;">Reverse Numbering List</h3>
+            <h4 style="margin: 0px;">Hobbies</h4>
+            <ol reversed style="margin: 1px;">
+                <li>Coding</li>
+                <li>Learning New Skills</li>
+                <li>Playing Cricket, Badminton</li>
+                <li>Watching out of box movies</li>
+            </ol>
+        </div>
+
+        <div class="day3-img-repeat">
+            <h2 style="color: darkblue;">Background image repeat by default.</h2>
+        </div>
+        
+        <div class="day3-img-no-repeat">
+            <h2 style="color: darkblue;">Background Repeat is set to no-repeat and background-size to cover for displaying that image in entire background.</h2>
+        </div>
 
     </body>
 
