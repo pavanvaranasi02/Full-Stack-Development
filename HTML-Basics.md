@@ -307,6 +307,133 @@ example: inside of style tag and div it should be like this: <br/>
 6. JavaScript can access an element with a specific id with the getElementById() method
 
 
+**HTML Iframes:**
+1. An HTML iframe is used to display a web page within a web page.
+2. Use the height and width attributes to specify the size of the iframe.
+3. By default, an iframe has a border around it. To remove the border, add the style attribute and use the CSS border property.
+4. An iframe can be used as the **target frame for a link**. The target attribute of the link must refer to the name attribute of the iframe.
+
+**HTML JavaScript:**
+1. JavaScript makes HTML pages more dynamic and interactive.
+2. The HTML <<code>script</code>> tag is used to define a client-side script (JavaScript). The <script> element either contains script statements, or it points to an external script file through the src attribute.
+3. The HTML <<code>noscript</code>> tag defines an alternate content to be displayed to users that have disabled scripts in their browser or have a browser that doesn't support scripts.
+
+**HTML Head:**
+1. The HTML head element is a container for the following elements: title, style, meta, link, script, and base.
+2. The <code>title</code> element: defines a title in the browser toolbar, provides a title for the page when it is added to favorites, displays a title for the page in search engine-results
+3. The <code>style</code> element is used to define style information for a single HTML page.
+4. The <code>link</code> element defines the relationship between the current document and an external resource.
+5. The <code>meta</code> element is typically used to specify the character set, page description, keywords, author of the document, refresh, and viewport settings.
+6. Refresh document every 30 seconds: <<code>meta http-equiv="refresh" content="30"</code>>
+7. Setting the viewport to make your website look good on all devices: <<code>meta name="viewport" content="width=device-width, initial-scale=1.0"</code>>
+8. The <code>width=device-width</code> part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+9. The <code>initial-scale=1.0</code> part sets the initial zoom level when the page is first loaded by the browser.
+10. The <<code>base</code>> element specifies the base URL and/or target for all relative URLs in a page.
 
 
+**HTML Layout Elements:**
+1. <<code>header</code>> - Defines a header for a document or a section.
+2. <<code>nav</code>> - Defines a set of navigation links
+3. <<code>section</code>> - Defines a section in a document
+4. <<code>article</code>> - Defines an independent, self-contained content
+5. <<code>aside</code>> - Defines content aside from the content (like a sidebar)
+6. <<code>footer</code>> - Defines a footer for a document or a section
+7. <<code>details</code>> - Defines additional details that the user can open and close on demand
+8. <<code>summary</code>> - Defines a heading for the <<code>details</code>> element
+<img width="218" alt="Screenshot 2024-02-14 at 5 36 55 PM" src="https://github.com/nagasaipavan1/Full-Stack-Development/assets/104422334/1b3fd6d0-431b-451f-8e1e-4889390046cf">
 
+**HTML Layout Techniques:**
+There are four different techniques to create multicolumn layouts. Each technique has its pros and cons: <br/>
+CSS framework <br/>
+CSS float property <br/>
+CSS flexbox <br/>
+CSS grid <br/>
+
+**HTML ComputerCode:**
+The <<code>kbd</code>> element defines keyboard input <br/>
+The <<code>samp</code>> element defines sample output from a computer program <br/>
+The <<code>code</code>> element defines a piece of computer code <br/>
+The <<code>var</code>> element defines a variable in programming or in a mathematical expression <br/>
+The <<code>pre</code>> element defines preformatted text<br/>
+
+**Note: Emojis are characters from the UTF-8 character set: 😄 😍 💗 and they can be used with values <a href="https://www.w3schools.com/html/html_emojis.asp?goalId=c7746e01-0f92-486c-bf6a-291d740c81b6" target="_blank">check it out.</a>**
+
+**HTML Forms:**
+1. An HTML form is used to collect user input. The user input is most often sent to a server for processing.
+2. The "form" element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc.
+3. The HTML "input" element is the most used form element. An "input" element can be displayed in many ways, depending on the type attributes like: <br/>
+text, radio, checkbox, **submit**, button, email, **password**, file, **hidden**, image, number, **reset**, url, date(you can also use the min and max attributes to add restrictions to dates:).
+4.  The characters in a password field are masked (shown as asterisks or circles).
+5.  Notice that each input field must have a name attribute to be submitted. If the name attribute is omitted, the value of the input field will not be sent at all.
+
+<pre>
+      Input Restrictions
+Here is a list of some common input restrictions:
+
+Attribute	Description
+---------------------------------
+checked	Specifies that an input field should be pre-selected when the page loads (for                         type="checkbox" or type="radio")
+disabled	Specifies that an input field should be disabled
+max	      Specifies the maximum value for an input field
+maxlength	Specifies the maximum number of character for an input field
+min	      Specifies the minimum value for an input field
+pattern	Specifies a regular expression to check the input value against
+readonly	Specifies that an input field is read only (cannot be changed)
+required	Specifies that an input field is required (must be filled out)
+size	      Specifies the width (in characters) of an input field
+step	      Specifies the legal number intervals for an input field
+value	      Specifies the default value for an input field
+</pre>
+
+6. The action attribute defines the action to be performed when the form is submitted. If the action attribute is omitted, the action is set to the current page.
+7. The target attribute specifies where to display the response that is received after submitting the form.
+<pre>
+The target attribute can have one of the following values:
+
+Value	      Description
+----------------------------------
+_blank	The response is displayed in a new window or tab
+_self	      The response is displayed in the current window
+_parent	The response is displayed in the parent frame
+_top	      The response is displayed in the full body of the window
+framename	The response is displayed in a named iframe
+      
+The default value is _self which means that the response will open in the current window.
+</pre>
+8. The method attribute specifies the HTTP method to be used when submitting the form data. The form-data can be sent as URL variables (with method="get") or as HTTP post transaction (with method="post"). The default HTTP method when submitting form data is GET.
+9. The autocomplete attribute specifies whether a form should have autocomplete on or off. When autocomplete is on, the browser automatically complete values based on values that the user has entered before.
+10. The novalidate attribute is a boolean attribute. When present, it specifies that the form-data (input) should not be validated when submitted.
+
+<pre>
+      List of All <form> Attributes
+Attribute	      Description
+-------------------------------------------
+accept-charset	Specifies the character encodings used for form submission
+action	      Specifies where to send the form-data when a form is submitted
+autocomplete	Specifies whether a form should have autocomplete on or off
+enctype	      Specifies how the form-data should be encoded when submitting it to the server                         (only for method="post")
+method	      Specifies the HTTP method to use when sending form-data
+name	            Specifies the name of the form
+novalidate	      Specifies that the form should not be validated when submitted
+rel	            Specifies the relationship between a linked resource and the current document
+target	      Specifies where to display the response that is received after submitting the form
+</pre>
+
+<pre>
+      The HTML <form> Elements
+The HTML form element can contain one or more of the following form elements:
+**
+input
+label
+select (*for drop-down list*, to select different option other than first use selected attribute and size attribute specifies how many you can see at a time, if you want to allow multiple selections use multiple attribue(hold ctrl key while selecting).)
+textarea (The rows attribute specifies the visible number of lines in a text area. The cols attribute specifies the visible width of a text area.)
+button
+fieldset (is used to group related data in a form.)
+legend (defines a caption for the fieldset element.)
+datalist (specifies a list of pre-defined options for an <input> element.)
+output (represents the result of a calculation (like one performed by a script).)
+option
+optgroup**
+</pre>
+11. The input **<code>autofocus</code>** attribute specifies that an input field should automatically get focus when the page loads.
+12. 
