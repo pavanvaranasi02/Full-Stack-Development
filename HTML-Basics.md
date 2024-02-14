@@ -313,6 +313,7 @@ example: inside of style tag and div it should be like this: <br/>
 3. By default, an iframe has a border around it. To remove the border, add the style attribute and use the CSS border property.
 4. An iframe can be used as the **target frame for a link**. The target attribute of the link must refer to the name attribute of the iframe.
 
+# Day-4
 **HTML JavaScript:**
 1. JavaScript makes HTML pages more dynamic and interactive.
 2. The HTML <<code>script</code>> tag is used to define a client-side script (JavaScript). The <script> element either contains script statements, or it points to an external script file through the src attribute.
