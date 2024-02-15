@@ -437,4 +437,74 @@ option
 optgroup**
 </pre>
 11. The input **<code>autofocus</code>** attribute specifies that an input field should automatically get focus when the page loads.
-12. 
+
+# Day-5:
+**HTML Canvas:**
+1. The HTML <<code>canvas</code>> element is used to draw graphics on a web page, via JavaScript.
+2. It is only a container(has no border and no content) for graphics. You must use JavaScript to actually draw the graphics.
+3. Canvas has several methods for drawing **paths, boxes, circles, text, and adding images.**
+4. **Note: Always specify an id attribute (to be referred to in a script), and a width and height attribute to define the size of the canvas. To add a border, use the style attribute.**
+5. <<code>canvas id="canvasId" width="200" height="100" style="border: 2px solid black;"</code>>
+
+**HTML SVG Graphics:**
+1. SVG stands for Scalable Vector Graphics.
+2. SVG is used to define vector-based graphics for the Web
+3. SVG defines graphics in XML format
+4. Each element and attribute in SVG files can be animated
+5. SVG is a W3C recommendation
+6. SVG integrates with other standards, such as CSS, DOM, XSL and JavaScript
+7. The HTML svg element is a container for SVG graphics. SVG has several methods for drawing paths, boxes, circles, text, and graphic images.
+
+
+**HTML Multimedia:**
+1. Multimedia on the web is sound, music, videos, movies, and animations.
+2. Multimedia files have formats and different extensions like: .wav, .mp3, .mp4, .mpg, .wmv, .avi, .mov, .ogg, .webM, .aac
+3. For Videos **Note: Only MP4, WebM, and Ogg video are supported by the HTML standard.**
+4. For Audios **Note: Only MP3, WAV, and Ogg audio are supported by the HTML standard.**
+
+**HTML Video:**
+1. There are three supported video formats: MP4, WebM, and Ogg
+2. The HTML <<code>video</code>> element is used to show a video on a web page.
+3. The <code>controls</code> attribute adds video controls, like play, pause, and volume.
+4. It is a good idea to always include width and height attributes. If height and width are not set, the page might flicker while the video loads.
+5. The <<code>source</code>> element allows you to specify alternative video files which the browser may choose from. The browser will use the first recognized format.
+6. To start a video automatically, use the autoplay attribute
+7. Add muted after autoplay to let your video start playing automatically (but muted).
+8. The text between the <video> and </video> tags will only be displayed in browsers that do not support the <video> element.
+9. Example: <<code>video width="520" height="400" controls autoplay muted>
+                  <<code>source src="movie.mp4" type="video/mp4"</code>>
+                  <<code>source src="movie.ogg" type="video/ogg"</code>>
+                  The video will not work with this browser, switch to another browser and try again,
+             </video </code>>
+
+10. The HTML DOM defines methods, properties, and events for the video element. This allows you to load, play, and pause videos, as well as setting duration and volume. There are also DOM events that can notify you when a video begins to play, is paused, etc.
+
+**HTML Audio:**
+1. There are three supported audio formats: MP3, WAV, and OGG.
+2. The HTML <<code>audio</code>> element is used to play an audio file on a web page.
+3. The <code>controls</code> attribute adds audio controls, like play, pause, and volume.
+4. The <<code>source</code>> element allows you to specify alternative audio files which the browser may choose from. The browser will use the first recognized format.
+5. The text between the <<code>audio</code>> and <<code>/audio</code>> tags will only be displayed in browsers that do not support the <<code>audio</code>> element.
+6. To start an audio file automatically, use the <code>autoplay</code> attribute
+7. Add muted after autoplay to let your audio file start playing automatically (but muted).
+8. <<code>audio controls autoplay muted</code>> <br/>
+  <<code>source src="horse.ogg" type="audio/ogg"</code>> <br/>
+  <<code>source src="horse.mp3" type="audio/mp3"</code>><br/>
+Your browser does not support the audio element.<br/>
+<<code>/audio</code>>
+8. The HTML DOM defines methods, properties, and events for the audio element. This allows you to load, play, and pause audios, as well as set duration and volume. There are also DOM events that can notify you when an audio begins to play, is paused, etc.
+
+**HTML Plug-ins:**
+1. Plug-ins were designed to be used for many different purposes: <br/>
+To run Java applets <br/>
+To run Microsoft ActiveX controls <br/>
+To display Flash movies <br/>
+To display maps <br/>
+To scan for viruses <br/>
+To verify a bank id.
+2. **Note: Java Applets, ActiveX controls and Shockwave flash are now not supported by most of the browsers.**
+3. The <<code>object</code>> element is supported by all browsers. It was designed to embed plug-ins (like Java applets, PDF readers, and Flash Players) in web pages, but can also be used to include HTML in HTML: <br/>
+Example: <<code>object width="100%" height="500px" data="snippet.html"</code>><<code>/object</code>>
+4. 
+
+
