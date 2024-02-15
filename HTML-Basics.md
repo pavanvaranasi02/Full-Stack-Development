@@ -12,7 +12,7 @@
 1. An HTML element is defined by a start tag, some content, and an end tag:
 Example: <<code>p</code>>This is a paragraph      with no extra spaces<<code>/p</code>>
 2. Unexpected results and errors may occur if you forget the end tag!
-3. HTML elements with no content are called empty elements. The <br> tag defines a line break, and is an empty element without a closing tag.
+3. HTML elements with no content are called empty elements. The <<code>br</code>> tag defines a line break, and is an empty element without a closing tag.
 4. HTML is Not Case Sensitive, but W3C recommends lowercase in HTML, and demands lowercase for stricter document types like XHTML.
 
 **HTML Attributes:**
@@ -53,7 +53,7 @@ Links are found in nearly all web pages. Links allow users to click their way fr
 1. HTML links are defined with the <<code>a</code>> tag.
 2. href is used to link either external websites or internal html files. (example for linking google: <a href="www.google.com">google</a>).
 3. Link to an Email Address, Use <code>mailto:</code> inside the <code>href</code> attribute to create a link that opens the user's email program (<a href="mailto:someone@example.com">Send email to someone@example.com</a>).
-4. To use an HTML button as a link, you have to add some JavaScript code. JavaScript allows you to specify what happens at certain events, such as a click of a button (<button onclick="document.location='default.asp'">HTML Tutorial</button>)
+4. To use an HTML button as a link, you have to add some JavaScript code. JavaScript allows you to specify what happens at certain events, such as a click of a button (<<code>button onclick="document.location='default.asp'"</code>>HTML Tutorial<<code>/button</code>>)
 5. Link Titles, The title attribute specifies extra information about an element. The information is most often shown as a tooltip text when the mouse moves over the element.
 (Example <a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial</a>)
 6. The target attribute can have one of the following values:
@@ -268,13 +268,13 @@ Note: The <caption> tag should be inserted immediately after the <table> tag.
 4. An inline element does not start on a new line. An inline element only takes up as much width as necessary.
 5. <<code>span</code>> is the best example of inline elements.
 6. You can check out all block and inline elements <a href="https://www.w3schools.com/html/html_blocks.asp" target="_blank">here</a>.
-7. <pre><strong>Note:</strong> An inline element cannot contain a block-level element!</pre>
-8. The <div> element is a block-level and is often used as a container for other HTML elements.
-9. The <span> element is an inline container used to mark up a part of a text, or a part of a document.
+7. <strong>Note:</strong> An inline element cannot contain a block-level element!
+8. The div element is a block-level and is often used as a container for other HTML elements.
+9. The span element is an inline container used to mark up a part of a text, or a part of a document.
 10. Both inline and block elements have no attributes but we use class, id, and style.
 
 **HTML Div Elements:**
-1. If you have a <<code>div</code>> element that is not 100% wide, and you want to center-align it, set the CSS <code>margin</code> property to **auto.**
+1. If you have a <<code>div</code>> element that is not 100% wide, and you want to center-align it, **set the CSS <code>margin</code> property to auto.**
 2. Aligning <div> elements side by side: The CSS **<code>float</code>** property is used for positioning and formatting content and allow elements float next to each other instead of on top of each other.
 3. If you change the <<code>div</code>> element's display property from block to <code>display:inline-block</code>, the <<code>div</code>> elements will no longer add a line break before and after, and will be displayed side by side instead of on top of each other.
 4. The CSS Flexbox Layout Module was introduced to make it easier to design flexible responsive layout structure without using float or positioning. <br/>
@@ -505,6 +505,23 @@ To verify a bank id.
 2. **Note: Java Applets, ActiveX controls and Shockwave flash are now not supported by most of the browsers.**
 3. The <<code>object</code>> element is supported by all browsers. It was designed to embed plug-ins (like Java applets, PDF readers, and Flash Players) in web pages, but can also be used to include HTML in HTML: <br/>
 Example: <<code>object width="100%" height="500px" data="snippet.html"</code>><<code>/object</code>>
-4. 
+4. The <<code>embed</code>> element also defines an embedded object within an HTML document. Web browsers have supported the <<code>embed</code>> element for a long time. However, it has not been a part of the HTML specification before HTML5.
+5. Note that the **<embed> element does not have a closing tag**. It can not contain alternative text.<br/><br/>
+
+**HTML Youtube Videos:**
+1. The easiest way to play videos in HTML, is to use YouTube.
+2. To play your video on a web page, do the following: <br/>
+Upload the video to YouTube <br/>
+Take a note of the video id <br/>
+Define an <iframe> element in your web page <br/>
+Let the src attribute point to the video URL <br/>
+Use the width and height attributes to specify the dimension of the player <br/>
+Add any other parameters to the URL (see below)
+2. Add mute=1 after autoplay=1 to let your video start playing automatically (but muted).
+3. dd loop=1 to let your video loop forever.
+4. Add controls=0 to not display controls in the video player.
+
+
+
 
 
