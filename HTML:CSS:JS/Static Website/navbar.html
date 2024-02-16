@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar for DTD</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .navbar {
+            border: 5px solid;
+            background-color: lightseagreen;
+            text-align: center;
+        }
+        nav {
+            padding: 0;
+            margin: 0;
+        }
+        ul {
+            list-style-type: none;
+        }
+        ul li {
+            display: inline;
+            margin: 0px 10px;
+            padding: 5px;
+        }
+        ul li a {
+            text-decoration: none;
+            color: white;
+        }
+        ul li a:hover {
+            color: springgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="myResume.html" target="halfRem">Check My Resume</a></li>
+                <li><a href="./trackTask.html" target="halfRem">Track Task</a></li>
+                <li><a href="./toDo.html" target="halfRem">My ToDo</a></li>
+                <li><a href="./funTimeTrack.html" target="halfRem">Fun Time</a></li>
+                <li><a href="./contactMe.html" target="halfRem">Contact Me</a></li>
+                <li style="float: right; overflow: hidden;"><span id="datetime" style="color: white;"></span></li>
+            </ul>
+        </nav>
+    </div>
+    <script>
+        // create a function to update the date and time
+        function updateDateTime() {
+          // create a new `Date` object
+          const now = new Date();
+  
+          // get the current date and time as a string
+          const currentDateTime = now.toLocaleString();
+  
+          // update the `textContent` property of the `span` element with the `id` of `datetime`
+          document.querySelector('#datetime').textContent = currentDateTime;
+        }
+  
+        // call the `updateDateTime` function every second
+        setInterval(updateDateTime, 1000);
+      </script>
+</body>
+</html>

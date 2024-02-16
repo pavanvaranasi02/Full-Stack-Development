@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Task</title>
+    <style>
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+        }
+        form {
+          margin: 5px;
+          padding: 5px;
+        }
+         form input {
+          margin: 5px;
+          border-radius: 20px;
+        }
+      </style>
+</head>
+<body>
+    <form name="formOnTask" onsubmit="getTask(event);">
+        <label for="taskName">TaskName to Search: </label>
+        <input type="text" name="taskName" required/> <br/>
+        <input type="submit" value="Search"/>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function getTask(event) {
+            event.preventDefault();
+            let form = document.formOnTask;
+            let divRes = document.getElementById("result");
+            let taskName = form.taskName.value;
+            let ar = JSON.parse(localStorage.getItem('toDoList'));
+            let priority;
+            for(let i=0;i<ar.length;i++) {
+                if(ar[i].taskName === taskName) {
+                    priority = ar[i].priority;
+                    break;
+                }
+            }
+            if(priority !== undefined) {
+                divRes.style.color = "green";
+                divRes.style.fontSize = "30px";
+                divRes.innerHTML = "😇TaskName: "+taskName+"<br/>Priority: "+priority;
+            } else {
+                divRes.style.color = "red";
+                divRes.style.fontSize = "30px";
+                divRes.innerHTML = "🥵There is no task named " + taskName;
+            }
+        }
+    </script>
+</body>
+</html>

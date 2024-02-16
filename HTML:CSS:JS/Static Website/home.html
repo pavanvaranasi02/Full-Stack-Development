@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <title>DTD Tasks Tracker</title>
+        <meta title="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+
+            body {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+
+        <iframe name="navbar" src="navbar.html" width="100%" height="100px"></iframe>
+        <iframe name="halfRem" width="100%" height="800px"></iframe>
+        
+        <div style="text-align: center; padding: 20px; display: none; background-color: #f8f9fa; border-radius: 10px;" id="contentToDisplay">
+            <h1 style="color: #007bff;">Welcome to DTD Tasks Tracker!</h1>
+            <p style="font-size: 1.1em;">This website is designed to help you track your tasks efficiently. Below are some of its key features:</p>
+            <ul style="list-style-type: disc; padding-left: 20px;">
+                <li><strong>Easy Navigation:</strong> The navigation bar located at the top allows seamless navigation between different sections of the website.</li>
+                <li><strong>Main Content Display:</strong> The main content is displayed in a larger frame below the navigation bar, providing a clear view of task-related information.</li>
+                <li><strong>Responsive Design:</strong> The website is designed to adapt to different screen sizes, ensuring optimal viewing experience across devices.</li>
+                <!-- Add more features here -->
+            </ul>
+            <h2 style="color: #007bff;">About Us</h2>
+            <p style="font-size: 1.1em;">DTD Tasks Tracker is a project developed to streamline task management and enhance productivity. Our goal is to provide a user-friendly platform for organizing and prioritizing tasks effectively.</p>
+            <!-- Add more information about your website or organization here -->
+        </div>
+
+        <script>
+            window.onload = function() {
+                var halfRemIframe = document.getElementsByName('halfRem')[0];
+                var contentDiv = document.getElementById('contentToDisplay');
+                halfRemIframe.srcdoc = contentDiv.innerHTML;
+                contentDiv.innerHTML = "";
+            };
+        </script>
+        
+    </body>
+
+
+</html>

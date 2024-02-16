@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toDO</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        table {
+            justify-content: center; 
+        }
+        table, tr, thead, th, td {
+            border: 2px solid black; 
+            border-collapse: collapse;
+            padding: 5px;
+            margin: 5px;
+            text-align: center;
+        }
+        form {
+            margin: 5px;
+            padding: 5px;
+        }
+        form input {
+            margin: 5px;
+            border-radius: 20px;
+        }
+    </style>
+    <script>
+        let ar = [];
+
+        function appendData() {
+            let todo = {};
+            todo.taskName = document.task.taskName.value;
+            todo.priority = document.task.priority.value;
+            ar.push(todo);
+            saveData();
+            printData();
+            return false; // Prevent form submission
+        }
+
+        function removeData(index) {
+            ar.splice(index, 1);
+            saveData();
+            printData();
+        }
+
+        function printData() {
+            let table = document.getElementById("toDO");
+            // Clear only rows except the header row
+            while (table.rows.length > 1) {
+                table.deleteRow(1);
+            }
+            for (let i = 0; i < ar.length; i++) {
+                let row = document.createElement("tr");
+                row.innerHTML = `<td>${ar[i].taskName}</td><td>${ar[i].priority}</td><td><button onclick="removeData(${i})">remove</button></td>`;
+                table.appendChild(row);
+            }
+        }
+        
+
+        function saveData() {
+            localStorage.setItem('toDoList', JSON.stringify(ar));
+        }
+
+        function loadData() {
+            let data = localStorage.getItem('toDoList');
+            if (data) {
+                ar = JSON.parse(data);
+                printData();
+            }
+        }
+
+        // Load saved data on page load
+        window.onload = function() {
+            loadData();
+        };
+    </script>
+</head>
+<body>
+    <table id="toDO">
+        <thead>
+            <th>Task Name</th>
+            <th>Task Priority</th>
+            <th>Remove task</th>
+        </thead>
+    </table>
+    <br/>
+    <br/>
+    <br/>
+    <form onsubmit="return appendData();" name="task">
+        <fieldset> 
+        <legend>Add a Task</legend>
+        <label for="taskName">Task: </label>
+        <input name="taskName" type="text" required /><br/>
+        <label for="priority">Priority: </label>
+        <input name="priority" type="number" maxlength="1" max="9" required /><br/>
+        <input type="submit" value="add ToDo" /><br/>
+        </fieldset>
+    </form>
+</body>
+</html>

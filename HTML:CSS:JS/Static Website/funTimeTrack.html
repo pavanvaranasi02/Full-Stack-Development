@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Countdown Timer</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  form {
+    margin: 5px;
+    padding: 5px;
+  }
+   form input {
+    margin: 5px;
+    border-radius: 20px;
+  }
+</style>
+</head>
+<body>
+
+<form id="countdownForm">
+  <label for="minutes">Enter minutes:</label>
+  <input type="number" id="minutes" name="minutes" min="1" max="60" required> <br/>
+  <button type="submit">Start Countdown</button>
+</form>
+<br/>
+<h1 id="countdown"></h1>
+<br/>
+<div id="youtubeVideo"></div>
+
+<script>
+  var countdownForm = document.getElementById('countdownForm');
+  var countdownDisplay = document.getElementById('countdown');
+  var youtubeVideoContainer = document.getElementById('youtubeVideo');
+  var countdownInterval;
+
+  countdownForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var minutesInput = document.getElementById('minutes');
+    var countdownMinutes = parseInt(minutesInput.value);
+
+    // Convert minutes to seconds
+    var countdownSeconds = countdownMinutes * 60;
+
+    // Start countdown
+    countdownInterval = setInterval(function() {
+      var minutes = Math.floor(countdownSeconds / 60);
+      var seconds = countdownSeconds % 60;
+
+      // Display countdown in minutes and seconds
+      countdownDisplay.textContent = minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+
+      // Decrement countdown
+      countdownSeconds--;
+
+      // When countdown reaches 0
+      if (countdownSeconds < 0) {
+        clearInterval(countdownInterval);
+        // Load and play YouTube video
+        youtubeVideoContainer.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/RG8XwuBL9ww?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+        // Optionally, you can add further actions here after countdown finishes
+      }
+    }, 1000); // Update countdown every second
+
+    // Reset the form
+    countdownForm.reset();
+  });
+</script>
+
+</body>
+</html>
