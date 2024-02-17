@@ -522,6 +522,8 @@ Add any other parameters to the URL (see below)
 4. Add controls=0 to not display controls in the video player.
 
 
+**Learn About API's in W3 Schools:** <a href="https://www.w3schools.com/html/html5_geolocation.asp?goalId=c7746e01-0f92-486c-bf6a-291d740c81b6" target="_blank">API's</a>
 
+**Learn about Browser Events:** <a href="https://www.youtube.com/watch?v=_ALUMTa8BAE" target="_blank">Browser Events</a>
 
 
