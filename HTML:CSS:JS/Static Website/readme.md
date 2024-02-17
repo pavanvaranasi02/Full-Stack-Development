@@ -3,7 +3,7 @@
 Welcome to the DTD Tasks Tracker project! This project is designed to help users track their tasks efficiently. <br/>It includes features such as **task management, navigation, and links** to various profiles.<br/>
 Best thing in this project is using **LocalStorage** which will store data perminantely in the browser.<br/>
 Also i have just learned how to implement the **timer functionality** and **date and time** functionality also **no.of views** functionality with this website.<br/>
-**You can check my <a href="dtd-tasks.netlify.app" target="_blank">DTD Tasks</a>.**
+**You can check my <a href="https://dtd-tasks.netlify.app" target="_blank">DTD Tasks</a>.**
 
 ## Table of Contents
 - [Description](#description)
