@@ -15,5 +15,17 @@ There are three ways of inserting a style sheet:
 
 **Note: Do not add a space between the property value (20) and the unit (px):
 Incorrect (space): font-size: 20 px;
-Correct (no space): font-size: 20px;**
+Correct (no space): font-size: 20px;**  <br/>
+
+A CSS comment is placed inside the <<code>style</code>> element, and starts with /* and ends with */ <br/>
+
+**CSS Backgrounds:**
+1. The CSS background properties are used to add background effects for elements.
+2. background-color, image, repeat, attachment are already in HTML.md
+3. background-position:	Sets the starting position of a background image. (ex: background-position: right top;)
+4. The background-clip property defines how far the background (color or image) should extend within an element.
+5. The background-origin property specifies the origin position (the background positioning area) of a background image.
+
+**CSS Borders:**
+1. The border-property(like width, color, style) property can have from one to four values (for the top border, right border, bottom border, and the left border)
 
