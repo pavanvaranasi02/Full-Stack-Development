@@ -167,7 +167,66 @@ a:active MUST come after a:hover <br/>
 3. The list-style-position property specifies the position of the list-item markers (bullet points). "list-style-position: outside;" means that the bullet points will be outside the list item. "list-style-position: inside;" means that the bullet points will be inside the list item.
 
 
+# Day-9:
+**CSS Tables:**
+1. Already many of the css techniques are discussed in html please refer that.
+2. **vertical-align** property sets the vertical alignment (like top, bottom, or middle) of the content in th or td. By default, the vertical alignment of the content in a table is middle (for both <th> and <td> elements).
+3. A responsive table will display a horizontal scroll bar if the screen is too small to display the full content: <br/>
+Add a container element (like <div>) with **overflow-x:auto** around the <table> element to make it responsive. <br/>
+Example: <<code>div style="overflow-x:auto;"</code>>
+4. The **caption-side** property specifies the placement of a table caption. (top, bottom)
+5. The **empty-cells** property sets whether or not to display borders on empty cells in a table.(show, hide) <br/>
+**Note: This property has no effect if border-collapse is "collapse".**
+6. The **border-spacing** property sets the distance between the borders of adjacent cells. (horizontal and vertical spacing length are given as values).
 
+**CSS Display:**
+1. The default display value for most elements is block or inline.
+2. The **display property** is used to change the default display behavior of HTML elements. <br/>
+<pre>
+inline	            Displays an element as an inline element
+block	              Displays an element as a block element
+contents	          Makes the container disappear, making the child elements children of the element the next level up in the DOM
+flex	              Displays an element as a block-level flex container
+grid	              Displays an element as a block-level grid container
+inline-block	      Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values
+inline-flex	        Displays an element as an inline-level flex container
+inline-grid	        Displays an element as an inline-level grid container
+inline-table	      The element is displayed as an inline-level table
+list-item	          Let the element behave like a <li> element
+run-in	            Displays an element as either block or inline, depending on context
+table	              Let the element behave like a <table> element
+table-caption	      Let the element behave like a <caption> element
+table-column-group	Let the element behave like a <colgroup> element
+table-header-group	Let the element behave like a <thead> element
+table-footer-group	Let the element behave like a <tfoot> element
+table-row-group	    Let the element behave like a <tbody> element
+table-cell	        Let the element behave like a <td> element
+table-column	      Let the element behave like a <col> element
+table-row	          Let the element behave like a <tr> element
+none	              The element is completely removed
+initial	            Sets this property to its default value
+inherit	            Inherits this property from its parent element. </pre>
+3. To hide elements we use **dispaly: none** and when we want to show them we use **display: block**.
+4. **Note: Setting the display property of an element only changes how the element is displayed, NOT what kind of element it is. So, an inline element with display: block; is not allowed to have other block elements inside it.**
+5. Hiding an element can be done by setting the **display property to none**. The element will be hidden, and the page will be displayed as if the element is not there. <br/>
+or **visibility:hidden;** also hides an element. However, the element will still take up the same space as before. The element will be hidden, but still affect the layout
+
+**CSS Layout - The position Property:**
+1. The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).
+2. Elements are then positioned using the top, bottom, left, and right properties. However, these properties will not work unless the position property is set first. They also work differently depending on the position value.
+3. **Static** positioned elements are not affected by the top, bottom, left, and right properties.
+4. An element with **position: relative;** is positioned relative to its normal position. Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
+5. An element with **position: fixed;** is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled.
+6. An element with **position: absolute;** is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed). However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling. <br/>
+**Note: Absolute positioned elements are removed from the normal flow, and can overlap elements.**
+7. An element with position: sticky; is positioned based on the user's scroll position. A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
+
+**CSS Layout - The z-index Property:**
+1. The **z-index property** specifies the stack order of an element.
+2. The z-index property specifies the stack order of an element (which element should be placed in front of, or behind, the others). An element can have a positive or negative stack order.
+3. **Note: z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) and flex items (elements that are direct children of display: flex elements).**
+4. If two positioned elements overlap each other **without a z-index specified,** the element defined last in the HTML code will be shown on top.
+5. 
 
 
 
