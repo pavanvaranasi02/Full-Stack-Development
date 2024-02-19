@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alert on Tab Close, Refresh, and Back Navigation</title>
+</head>
+<body>
+
+<script>
+    console.log("Log in..");
+    // alert on refersh
+    window.addEventListener('beforeunload', (e) => {
+        e.preventDefault();
+        console.log("Refresh");
+        return alert("Do you really want to refersh the page");
+    });
+
+    // alert on closing tab.
+    window.addEventListener('unload', (e) => {
+        e.preventDefault();
+        console.log('close');
+        return alert("Do you really want to close the tab");
+    });
+
+    // Alert on back navigation
+    window.addEventListener('popstate', function (e) {
+        console.log("Back");
+        e.preventDefault();
+        var confirmationMessage = 'Are you sure you want to navigate back?';
+        return alert(confirmationMessage);
+    });
+</script>
+
+<!-- Your HTML content here -->
+    <p>HTML Page which tries to restrict by giving an alert before performing operations like Refresh in a tab, going back from the tab and closing the tab.</p>
+</body>
+</html>
