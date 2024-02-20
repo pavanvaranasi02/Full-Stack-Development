@@ -226,7 +226,51 @@ or **visibility:hidden;** also hides an element. However, the element will still
 2. The z-index property specifies the stack order of an element (which element should be placed in front of, or behind, the others). An element can have a positive or negative stack order.
 3. **Note: z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) and flex items (elements that are direct children of display: flex elements).**
 4. If two positioned elements overlap each other **without a z-index specified,** the element defined last in the HTML code will be shown on top.
-5. 
+
+# Day-10:
+**CSS Overflow:**
+1. The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
+2. The overflow property has the following values:
+<pre>visible - Default. The overflow is not clipped. The content renders outside the element's box
+hidden - The overflow is clipped, and the rest of the content will be invisible
+scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
+auto - Similar to scroll, but it adds scrollbars only when necessary </pre>
+3. **Note: The overflow property only works for block elements with a specified height.**
+4. By default, the **overflow is visible**, meaning that it is not clipped and it renders outside the element's box
+5. With the h**idden value, the overflow** is clipped, and the rest of the content is hidden
+6. Setting the value to **scroll**, the overflow is clipped and a scrollbar is added to scroll inside the box. Note that this will add a scrollbar both horizontally and vertically (even if you do not need it).
+7. The **auto value** is similar to scroll, but it adds scrollbars only when necessary.The overflow-x and overflow-y properties specifies whether to change the overflow of content just horizontally or vertically (or both)
+8. **overflow-x** specifies what to do with the left/right edges of the content. **overflow-y** specifies what to do with the top/bottom edges of the content.
+9. **overflow-wrap**	Specifies whether or not the browser can break lines with long words, if they overflow its container. (normal, anywhere, break-word).
+
+**CSS Layout - float and clear:**
+1. The CSS float property specifies how an element should float. (left, right, none).
+2. The CSS clear property specifies what elements can float beside the cleared element and on which side. (none, left, right, both).
+3. **Note: When clearing floats, you should match the clear to the float: If an element is floated to the left, then you should clear to the left. Your floated element will continue to float, but the cleared element will appear below it on the web page.**
+4. **The clearfix Hack is _overflow: auto_**: If a floated element is taller than the containing element, it will "overflow" outside of its container. We can then add a clearfix hack to solve this problem.
+5. also we can also use **display: table;** for clearfix Hack
+
+
+**CSS Layout - display: inline-block:**
+1. Compared to **display: inline**, the major difference is that **display: inline-block** allows to set a width and height on the element.
+2. Also, with **display: inline-block**, the top and bottom margins/paddings are respected, but with **display: inline** they are not.
+3. Compared to **display: block**, the major difference is that **display: inline-block** does not add a line-break after the element, so the element can sit next to other elements.
+4. Example: <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block_span1">check here</a>
+
+**Center Align Elements:**
+1. To horizontally center a block element (like div), use **margin: auto**;
+2. Setting the width of the element will prevent it from stretching out to the edges of its container. The element will then take up the specified width, and the remaining space will be split equally between the two margins.
+3. To just center the text inside an element, use **text-align: center**;
+4. To center an image, set **left and right margin to aut**o and make it into a block element. Example:
+<pre>img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}</pre>
+5. Left and Right Align - Using position, One method for aligning elements is to use **position: absolute**; Another method for aligning elements is to use the **float** property:
+6. There are many ways to center an element vertically in CSS. A simple solution is to use **top and bottom padding**, another trick is to use the **line-height property** with a value that is equal to the height property. another solution is to use positioning and the transform property. You can also use flexbox to center things.
+
 
 
 
