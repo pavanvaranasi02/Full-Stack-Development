@@ -236,6 +236,12 @@ or **visibility:hidden;** also hides an element. However, the element will still
 
 
 
-
-
+**Important Questions:**
+1. What is the full form of CSS? what does cascading mean?
+2. What is meant by Specificity?
+3. What is the default value of position?
+4. What is the difference between position relative and absolute.
+5. Tell me what do you know about flexbox?
+6. what is box model? what is difference between content-box and border-box.
+7. 
 
