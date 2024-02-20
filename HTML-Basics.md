@@ -527,3 +527,13 @@ Add any other parameters to the URL (see below)
 **Learn about Browser Events:** <a href="https://www.youtube.com/watch?v=_ALUMTa8BAE" target="_blank">Browser Events</a>
 
 
+
+
+**Important Questions:**
+1. Name any 5 semantic tags and inline elements.
+2. what is difference between inline and block elements?
+3. what is difference between tag and element in HTML?
+4. can we set height and width for inline elements?
+5. is image tag an inline HTML element or not ? If so how is it possible to set height and width for image tag? (Rephrased Elements)
+6. Difference between canvas and svg html elements?
+7. 
