@@ -22,5 +22,6 @@
 2. ECMAScript was created to standardize JavaScript, and ES6 is the 6th version of ECMAScript, it was published in 2015, and is also known as ECMAScript 2015.
 
 
-
-
+**Why React?**
+1. Fast Responsive.
+2. 
