@@ -271,9 +271,36 @@ auto - Similar to scroll, but it adds scrollbars only when necessary </pre>
 5. Left and Right Align - Using position, One method for aligning elements is to use **position: absolute**; Another method for aligning elements is to use the **float** property:
 6. There are many ways to center an element vertically in CSS. A simple solution is to use **top and bottom padding**, another trick is to use the **line-height property** with a value that is equal to the height property. another solution is to use positioning and the transform property. You can also use flexbox to center things.
 
+# Day-11: 
+**CSS Opacity / Transparency:**
+1. The opacity property specifies the opacity/transparency of an element.
+2. The opacity property can take a value from 0.0 - 1.0. The lower the value, the more transparent
 
+**CSS Combinators:**
+1. A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.
+2. There are four different combinators in CSS:
+<pre>descendant selector (space)
+child selector (>)
+adjacent sibling selector (+)
+general sibling selector (~) </pre>
+3. The descendant selector matches all elements that are descendants of a specified element. (for all p tags in div if we want to style, we can do this: inside style tag div p{})
+4. The child selector selects all elements that are the children of a specified element. (div > p{})
+5. The adjacent sibling selector is used to select an element that is directly after another specific element. Sibling elements must have the same parent element, and "adjacent" means "immediately following". (div + p{}).
+6. The general sibling selector selects all elements that are next siblings of a specified element. (div ~ p {})
 
-
+**What are Pseudo-classes and elements?**
+1. A pseudo-class is used to define a special state of an element. (hover, visited, active, first-child, lang ...).
+2. A CSS pseudo-element is used to style specified parts of an element. (after, before, ...)
+3. used for tags like a:hover, div:hover, q:lang(uniqueName), ...
+4. <pre> Important pseudo elements:
+::after	p::after	Insert content after every <p> element
+::before	p::before	Insert content before every <p> element
+::first-letter	p::first-letter	Selects the first letter of every <p> element
+::first-line	p::first-line	Selects the first line of every <p> element
+::marker	::marker	Selects the markers of list items
+::selection	p::selection	Selects the portion of an element that is selected by a user </pre>
+4. <a href="https://www.w3schools.com/css/css_pseudo_classes.asp">check more pseudo classes and elements here</a>
+5. **Note: The ::first-line, ::first-letter pseudo-element can only be applied to block-level elements.**
 
 
 
@@ -288,4 +315,3 @@ auto - Similar to scroll, but it adds scrollbars only when necessary </pre>
 5. Tell me what do you know about flexbox?
 6. what is box model? what is difference between content-box and border-box.
 7. 
-
