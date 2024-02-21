@@ -299,8 +299,55 @@ general sibling selector (~) </pre>
 ::first-line	p::first-line	Selects the first line of every <p> element
 ::marker	::marker	Selects the markers of list items
 ::selection	p::selection	Selects the portion of an element that is selected by a user </pre>
-4. <a href="https://www.w3schools.com/css/css_pseudo_classes.asp">check more pseudo classes and elements here</a>
+4. <a href="https://www.w3schools.com/css/css_pseudo_classes.asp">check more pseudo classes and elements here</a> <br/>
 5. **Note: The ::first-line, ::first-letter pseudo-element can only be applied to block-level elements.**
+
+**Automatic Numbering With Counters:**
+1. CSS counters are like "variables". The variable values can be incremented by CSS rules (which will track how many times they are used).
+2. To work with CSS counters we will use the following properties:
+<pre>
+counter-reset - Creates or resets a counter
+counter-increment - Increments a counter value
+content - Inserts generated content
+counter() or counters() function - Adds the value of a counter to an element
+To use a CSS counter, it must first be created with counter-reset.</pre>
+3. Nesting Counters are also provided.
+4. For more details <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_counters2">Look here</a>
+
+**What is Specificity?**
+1. If there are two or more CSS rules that point to the same element, the selector with the highest specificity value will "win", and its style declaration will be applied to that HTML element.
+2. Every CSS selector has its place in the specificity hierarchy. There are four categories which define the specificity level of a selector:
+<pre>
+Inline styles - Example: <<code>h1 style="color: pink;"</code>>
+IDs - Example: #navbar
+Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href]
+Elements and pseudo-elements - Example: h1, ::before </pre>
+3. Inline style gets a specificity value of 1000, add 100 for each ID value, add 10 for each class value (or pseudo-class or attribute selector), add 1 for each element selector or pseudo-element. The universal selector (*) and inherited values have a specificity of 0
+4. **Note: There is one exception to this rule: if you use the !important rule, it will even override inline styles!**
+5. Equal specificity: the latest rule wins - If the same rule is written twice into the external style sheet, then the latest rule wins.
+6. ID selectors have a higher specificity than attribute selectors - Look at the following three code lines:
+<pre>
+div#a {background-color: green;}
+#a {background-color: yellow;}
+div[id=a] {background-color: blue;}
+</pre>
+7. Contextual selectors are more specific than a single element selector - The embedded style sheet is closer to the element to be styled.
+8. A class selector beats any number of element selectors - a class selector such as .intro beats h1, p, div, etc
+
+**What is !important?**
+1. The !important rule in CSS is used to add more importance to a property/value than normal.
+2. In fact, if you use the !important rule, it will override ALL previous styling rules for that specific property on that element!
+3. The only way to override an !important rule is to include another !important rule on a declaration with the same (or higher) specificity in the source code - and here the problem starts! This makes the CSS code confusing and the debugging will be hard, especially if you have a large style sheet!
+
+**CSS Math Functions:**
+1. The CSS math functions allow mathematical expressions to be used as property values. like calc(), max() and min() functions.
+2. The calc() function performs a calculation to be used as the property value. Ex: width: calc(100% - 100px);
+3. The max() function uses the largest value, from a comma-separated list of values, as the property value. Ex: width: max(50%, 300px);
+4. The min() function uses the smallest value, from a comma-separated list of values, as the property value. Ex: width: min(50%, 300px);
+
+
+
+
 
 
 
