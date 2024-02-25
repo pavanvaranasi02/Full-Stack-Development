@@ -346,8 +346,10 @@ div[id=a] {background-color: blue;}
 4. The min() function uses the smallest value, from a comma-separated list of values, as the property value. Ex: width: min(50%, 300px);
 
 
-
-
+**FreeCodeCamp CSS properties:**
+1. object-fit (cover)
+2. justify-content (space-between)
+3. align-items (flex-end)
 
 
 
