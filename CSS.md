@@ -352,7 +352,16 @@ div[id=a] {background-color: blue;}
 3. align-items (flex-end)
 4. aspect-ratio (35/4)
 5. child combinator (>)
-6. 
+6. role attribute for section tag with region value.
+7. aria-labeledby attribute.
+8. clip: rect(0, 0, 0, 0); white-space: nowrap;
+9. flex-wrap: wrap;
+10. @media (prefers-reduced-motion: no-preference) { <br/>
+    * { <br/>
+      scroll-behavior: smooth; <br/>
+    } <br/>
+} <br/>
+11. aria-hidden=true, to hide the element.
 
 
 
