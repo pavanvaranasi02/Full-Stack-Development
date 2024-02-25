@@ -350,6 +350,9 @@ div[id=a] {background-color: blue;}
 1. object-fit (cover)
 2. justify-content (space-between)
 3. align-items (flex-end)
+4. aspect-ratio (35/4)
+5. child combinator (>)
+6. 
 
 
 
