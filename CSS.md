@@ -364,6 +364,18 @@ div[id=a] {background-color: blue;}
 11. aria-hidden=true, to hide the element.
 
 
+<p>You can add variables in css using the syntax: --variable-name and we can use this variable using var(--variable-name)</p>
+<p>We add gradient types to background with this following syntax:</p>
+<p>background: repeating-linear-gradient {</p>
+<p>var(--variable-name) 0%,</p>
+<p>var(--variable-name) 5%</p>
+<p>}, repeating-linear-gradient { </p>
+<p>color1</p>
+<p>};</p>
+
+<p>In images we can use lazy as value to the attribute loading and this will only load when users scroll to that image, and before loading it all non-lazy elements are loaded first.</p>
+
+
 
 
 
