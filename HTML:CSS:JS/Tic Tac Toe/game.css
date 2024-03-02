@@ -1,0 +1,67 @@
+h1 {
+    font-size: 3vw;
+}
+
+.container {
+    display: grid;
+    position: absolute;
+    grid-template-rows: 33% 33% 33%;
+    /* border: 2px solid black; */
+    width: 50%;
+    height: 50%;
+    top: 20%;
+    left: 20%;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    width: 100%;
+    /* border: 3px solid coral; */
+    justify-content: center;
+    align-items: center;
+}
+
+.end {
+    width: 100%;
+    height: 150%;
+}
+
+.end button {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 0px;
+    font-size: 2vw;
+}
+
+.box {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    margin: 1%;
+    padding: 0;
+    font-weight: bold;
+    font-size: 5vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.box:hover {
+    background-color: papayawhip;
+    color: black;   
+}
+
+.row button {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 0px;
+    font-size: 4vw;
+}
+
+.box button:hover {
+    background-color: papayawhip;
+    color: black;  
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="game.css"/>
+    <script src="game.js"></script>
+</head>
+<body>
+
+    <h1 id="winner">Winner of the Last Game: [</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="box" id="box1"><button onclick="run(1)">-</button></div>
+            <div class="box" id="box2"><button onclick="run(2)">-</button></div>
+            <div class="box" id="box3"><button onclick="run(3)">-</button></div>
+        </div>
+        <div class="row">
+            <div class="box" id="box4"><button onclick="run(4)">-</button></div>
+            <div class="box" id="box5"><button onclick="run(5)">-</button></div>
+            <div class="box" id="box6"><button onclick="run(6)">-</button></div>
+        </div>
+        <div class="row">
+            <div class="box" id="box7"><button onclick="run(7)">-</button></div>
+            <div class="box" id="box8"><button onclick="run(8)">-</button></div>
+            <div class="box" id="box9"><button onclick="run(9)">-</button></div>
+        </div>
+        <div class="end">
+            <!-- <div class="box"></div> -->
+            <div class="box"><button onclick="clearAll()">Restart</button></div>
+            <!-- <div class="box"></div> -->
+        </div>
+    </div>
+</body>
+</html>
