@@ -24,4 +24,16 @@
 
 **Why React?**
 1. Fast Responsive.
-2. 
+2. Declarative UI Programming.  (Declarative means -> You define the goal, not the steps);
+
+**Getting Started with React:**
+1. Install Node.js on your Operating System.
+2. We can now create react apps using **vite@latest** or **create-react-app**.
+3. **npm install** is the command used to install all packages used in the react application.
+4. For Vite, **npm run dev** is used to run the application.
+5. **npm start** is the command for create-react-app.
+
+**Why Do You Need A Special Project Setup?:**
+1. Why we can't create a html, and js file and run our code directly, is because we are using **HTML in JS** which is also called **JSX**.
+2. The JSX code must be transformed into browser understandable code then only, the browser can execute the JSX code.
+3. 
