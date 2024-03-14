@@ -36,4 +36,46 @@
 **Why Do You Need A Special Project Setup?:**
 1. Why we can't create a html, and js file and run our code directly, is because we are using **HTML in JS** which is also called **JSX**.
 2. The JSX code must be transformed into browser understandable code then only, the browser can execute the JSX code.
-3. 
+
+**Import and Export in React:**
+1. **Why Use It?** <br/>
+    Break down code into reusable modules across multiple files. <br/>
+    Improves code maintainability and manageability.
+2. **Exporting** <br/>
+Makes variables, functions, or values available for other files. <br/>
+**Two ways to export:** <br/>
+**Default Export (only one per file)** <br/>
+Use export default keyword before the value. <br/>
+Import with import name from 'path/to/file' (no curly braces). <br/>
+**Named Exports (multiple per file)** <br/>
+Use export keyword before the variable or function name. <br/>
+Import with curly braces: import { name1, name2 } from 'path/to/file'. <br/>
+3. **Importing** <br/>
+Use import keyword to bring in exported functionalities from other files. <br/>
+Syntax depends on export type (default or named). <br/>
+4. **Additional Points** <br/>
+Use type="module" in script tag for import/export to work (not required in React projects due to build process). <br/>
+You can import **group named exports** into an object using import * as utils from 'path/to/file'. <br/>
+Use **as** keyword to assign aliases to imported names: import { abc as content } from 'path/to/file'.
+
+**JS Arrow Functions:**
+1. **Omitting Parameter List Parentheses:** <br/>
+You can skip parentheses only if your arrow function has exactly one parameter. <br/>
+Examples: <br/>
+Valid: userName => { ... } <br/>
+Invalid (no parameters): () => { ... } (use () => { ... } instead) <br/>
+Invalid (multiple parameters): userName, userAge => { ... } (use (userName, userAge) => { ... } instead) <br/>
+
+2. **Omitting Function Body Curly Braces:**
+You can skip curly braces and the return keyword only if your function has a single expression to return. <br/>
+Examples: <br/>
+Valid: number => number * 3; <br/>
+Invalid (missing return): number => return number * 3; <br/>
+Invalid (complex logic): number => if (number === 2) { return 5 }; (use curly braces for complex logic) <br/>
+
+3. **Returning an Object:** <br/>
+When using the shortcut from point 2 and returning an object, you must wrap the object in parentheses. <br/>
+Example: <br/>
+Valid: number => ({ age: number }); <br/>
+Invalid: number => { age: number };
+
