@@ -144,3 +144,40 @@ function handleTimeout() { <br/>
 setTimeout(handleTimeout(), 1000); <br/>
 // Correct: Passes the `handleTimeout` function as an argument <br/>
 setTimeout(handleTimeout, 1000); </code>
+
+**Important Methods:**
+1. **map()**: creates a new array by applying a function to every element in the original array. <br/>
+<code> const numbers = [1, 2, 3, 4, 5]; <br/>
+const doubledNumbers = numbers.map(number => number * 2); <br/>
+console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10] </code> 
+2. **filter()**: creates a new array containing only elements that pass a test implemented by the provided function. <br/>
+<code> const numbers = [1, 2, 3, 4, 5]; <br/>
+const evenNumbers = numbers.filter(number => number % 2 === 0); <br/>
+console.log(evenNumbers); // Output: [2, 4] </code>
+3. **reduce()**: applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value. <br/>
+<code> const numbers = [1, 2, 3, 4, 5]; <br/>
+const sum = numbers.reduce((accumulator, number) => accumulator + number, 0); <br/>
+// Note: Here first statement is the logic and the second statement sepearated by comma (0 in above case) is accumulator initial value. <br/>
+console.log(sum); // Output: 15 </code>
+4. **find()**: returns the value of the first element in the array that satisfies a test provided by the function. <br/>
+<code> const numbers = [1, 2, 3, 4, 5]; <br/>
+const firstEvenNumber = numbers.find(number => number % 2 === 0); <br/>
+console.log(firstEvenNumber); // Output: 2 </code>
+5. **findIndex()**: returns the index of the first element in the array that satisfies a test provided by the function. If no element passes the test, -1 is returned. <br/>
+<code> const numbers = [1, 2, 3, 4, 5]; <br/>
+const indexOfFirstEvenNumber = numbers.findIndex(number => number % 2 === 0); <br/>
+console.log(indexOfFirstEvenNumber); // Output: 1 </code>
+6. **concat()**: creates a new array by joining a or more arrays and/or values to the calling array.<br/>
+<code> const colors = ["red", "yellow", "blue"]; <br/>
+const fruits = ["apple", "banana"]; <br/>
+const newColors = colors.concat(fruits); <br/>
+console.log(newColors); // Output: ["red", "yellow", "blue", "apple", "banana"] </code>
+7. **slice()**: creates a new array by copying a section of an array from a start index to an end index, without modifying the original array. <br/>
+<code> const colors = ["red", "yellow", "blue", "green"]; <br/>
+const newColors = colors.slice(1, 3); <br/>
+console.log(newColors); // Output: ["yellow", "blue"] </code>
+8. **splice()**: modifies the calling array by removing elements from a given index, and optionally inserting new elements into that index. The splice method returns a new array containing the deleted elements. <br/>
+<code> const colors = ["red", "yellow", "blue", "green"]; <br/>
+const removedElement = colors.splice(1, 1, "purple"); <br/>
+console.log(colors); // Output: ["red", "purple", "blue", "green"] <br/>
+console.log(removedElement); // Output: ["yellow"] </code>
