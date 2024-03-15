@@ -71,6 +71,13 @@ Others **allow omitting the extension** (e.g., import App from './App'). <br/>
 **Alternate ways to use props:**
 1. **Shorthand for Setting Props:** If prop names directly match object property names, use the spread operator within curly braces directly on the component tag (e.g., <CoreConcept {...CORE_CONCEPTS[0]} />).
 2. **Destructuring in Parameter List:** Use curly braces in the component function's parameter list to destructure the props object (e.g., function CoreConcept({ title, description, image }) { ... }).
-Accessing Destructured Props: Use the destructured variable names directly within the component function.
+3. **Accessing Destructured Props:** Use the destructured variable names directly within the component function.
+
+**Creating Reusable Tab Button Components with Children Prop in React:**
+1. **Children Property:** Extract the children property from the props object using either dot notation (e.g., props.children) or object destructuring (e.g., const { children } = props).
+2. **Content Output:** Use the extracted children value to display the content within the component's JSX.
+3. i.e., Include content (text) between the component's opening and closing tags (e.g., <<code>TabButton</code>>Components<<code>/TabButton</code>>).
+4. So, now when you write props.children then it will give you the text Components acording to above example.
+5. Also we can normally pass the props also.
 
 
