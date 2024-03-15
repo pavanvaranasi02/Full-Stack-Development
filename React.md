@@ -79,3 +79,68 @@ Example: <br/>
 Valid: number => ({ age: number }); <br/>
 Invalid: number => { age: number };
 
+
+**Arrays in JavaScript:**
+1. Arrays store ordered lists of values. 
+2. Created using square brackets [].
+3. Access elements by index, starting from 0 (e.g., hobbies[0]).
+4. **Array Methods:** <br/>
+.push(item) - Add an item to the end of the array. <br/>
+.findIndex(callback) - Finds the index of the first element where the callback function returns true. The callback function receives an element (item) as input and should return true/false. <br/>
+5. **Arrow functions** are a concise way to write callback functions for .findIndex, <br/>
+.map(callback) - Creates a new array with the results of calling the callback function on every element in the original array.
+6. The callback function receives an element (item) as input and should return the transformed value.
+7. Arrow functions are commonly used for concise callback functions in .map.
+
+**Destructing:**
+1. **Destructuring Arrays:** <br/>
+**Purpose:** Extract values from arrays and assign them to variables. <br/>
+**Syntax:** Square brackets [] on the left side of the assignment. <br/>
+**Example:** <code> const userNameData = ["Max", "Schwarzmuller"]; <br/>
+let firstName = userNameData[0]; <br/>
+let lastName = userNameData[1]; <br/>
+// Destructuring alternative (shorter): <br/>
+const [firstName, lastName] = userNameData;  </code> <br/>
+**Benefits:** More concise and readable code.
+2. **Destructuring Objects:** <br/>
+**Purpose:** Extract properties from objects and assign them to variables. <br/>
+**Syntax:** Curly braces {} on the left side of the assignment. <br/>
+**Example:** <code> const user = { name: "Max", age: 31 }; <br/>
+let userName = user.name; <br/>
+let age = user.age; <br/>
+// Destructuring alternative (shorter): <br/>
+const { name: userName, age } = user; // Alias for "name" property </code><br/>
+**Key Points:** Property names in the destructured object must match the object's property names. <br/>
+Use colons : to assign **aliases** to extracted properties.
+
+**Spread Operator (...):**
+1. **Purpose:** Expands iterables (like arrays or objects) into individual elements when used in a new array or object literal.
+2. **Syntax:**
+In arrays: [...array1, ...array2, ...etc] <br/>
+In objects: { ...object1, ...object2, ...etc } <br/>
+**Example (Arrays):** <code> const hobbies = ["Sports", "Cooking"]; <br/>
+const newHobbies = ["Reading"]; <br/>
+// Merging arrays with nested arrays (incorrect): <br/>
+const mergedHobbies = [hobbies, newHobbies]; // Nested arrays <br/>
+// Merging arrays with spread operator (correct): <br/>
+const mergedHobbies = [...hobbies, ...newHobbies]; // Individual values </code> <br/>
+**Example (Objects):** <br/>
+<code> const user = { name: "Max" }; <br/>
+const extendedUser = { isAdmin: true }; <br/>
+// Merging objects with spread operator: <br/>
+const fullUser = { ...user, ...extendedUser }; </code>
+
+**setTimeout:**
+1. **Purpose:** Schedules a function to be executed after a specified delay (in milliseconds). <br/>
+**Syntax:** setTimeout(function, milliseconds) <br/>
+Example: <code> function sayHi() { <br/>
+  console.log("Hi!"); <br/>
+} <br/>
+setTimeout(sayHi, 2000); // Execute sayHi after 2 seconds <br/>
+function handleTimeout() { <br/>
+  console.log("Timed out (function)"); <br/>
+} <br/>
+// Wrong: Executes `handleTimeout` immediately and passes the return value (undefined) <br/>
+setTimeout(handleTimeout(), 1000); <br/>
+// Correct: Passes the `handleTimeout` function as an argument <br/>
+setTimeout(handleTimeout, 1000); </code>
