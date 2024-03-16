@@ -80,4 +80,82 @@ Others **allow omitting the extension** (e.g., import App from './App'). <br/>
 4. So, now when you write props.children then it will give you the text Components acording to above example.
 5. Also we can normally pass the props also.
 
+**Event Handling with Custom Components and onClick Prop in React:**
+1. **Custom Component Click Events:** Native onClick prop not directly accessible on custom components.
+2. **Function Forwarding:** Pass click handler function from parent component to custom component's built-in button.
+3. **onSelect Prop (Example):** Custom prop for receiving a click handler function in the custom component.
+4. **Event Handling Pattern:** <br/>
+  Define click handler function in parent component. <br/>
+  Pass the function as a value to a custom component's prop (e.g., onSelect). <br/>
+  In the custom component, forward the received function to the built-in button's onClick prop. (ex: <<code>TabButton onSelect={handleSelect} </code>/>).
+
+**Controlling Event Handler Execution and Passing Arguments in React:**
+1. **Controlling Event Handler Execution:** Arrow functions passed as props allow control over the timing and arguments for event handler execution.
+2. **Passing Arguments to Event Handlers:** Arguments can be passed to event handlers through the arrow function definition.
+3. **handleSelect Parameter:** The selectedButton parameter in handleSelect can receive custom identifiers based on button clicks. (ex: <<code>TabButton onSelect={() => handleSelect('components')}</code>/>).
+
+<hr/>
+
+**Understanding React State for Dynamic UI Updates:**
+1. **Why Updating a Variable Doesn't Work:** <br/>
+- Assigning a new value to a variable within a component function doesn't directly trigger a **re-render.**
+- React only renders components based on their initial execution and doesn't automatically re-evaluate them.
+2. **React State for Dynamic UI Updates:**
+- **State Manages Dynamic Data**: React's useState Hook allows creating component-specific state to store and manage data that can change over time.
+- **Updating State Triggers Re-renders:** Calling the setState function (returned by useState) updates the state and triggers a re-render of the component, ensuring the UI reflects the latest data.
+3. **Using useState Hook:**
+- **Import useState:** Import the useState Hook from react.
+- **Call useState in Component Function:** Call useState within the component function, passing the initial state value as an argument.
+- **Destructure Returned Array:** The useState function returns an array with two elements:
+- The current state value (selectedTopic in the example).
+- A function to update the state (setSelectedTopic).
+- **Update State:** Call the update function (setSelectedTopic) with the new value.
+4. **Understanding State Updates:**
+- **Scheduled Updates:** When calling the update function, React schedules the state update, not applying it immediately.
+- **Re-execution after Update:** The component function is re-executed after the state update is applied, ensuring access to the updated value.
+- **Logging Order:** State values logged immediately after the update function call might reflect the old value due to the scheduling mechanism.
+5. **Where to Declare and Initialize State:**
+- **Inside Component Functions:** Use the useState Hook at the top level of your component function to declare and initialize state variables.
+6. **Where Not to Declare and Initialize State:**
+- **Outside Component Functions:** State variables should not be declared or initialized outside of component functions, as they are specific to the component's state management.
+- **Event Handlers:** While you can update state within event handlers (functions triggered by user interactions), you shouldn't declare or initialize them there.
+
+**Conditional Rendering in React: Multiple Approaches:**
+1. **Conditional Rendering:** Displaying content based on certain conditions within components.
+ - Example: <pre>function Greeting(props) {
+  const isLoggedIn = props.isLoggedIn;
+  return (
+    <<code>div</code>>
+      {isLoggedIn ? (
+        <<code>h1</code>Welcome back!<<code>/h1</code>>
+      ) : (
+        <<code>h1</code>>Please sign in.<<code>/h1</code>>
+      )}
+    <<code>/div</code>>
+  );
+}</pre>
+2. **Ternary Operator:** A concise way to express conditional statements (condition ? exprIfTrue : exprIfFalse).
+  - Example: <pre>function Button(props) {
+  const handleClick = props.onClick;
+  return (
+    <<code>button disabled={!props.isDisabled} onClick={handleClick} </code>>
+      {props.isDisabled ? "Disabled" : "Click me"}
+    <<code>/button</code>>
+  );
+}</pre>
+3. **Logical AND Operator (&&):** Outputs the value after it if the preceding condition is true (commonly used for conditional rendering).
+4. **Conditional Variables:** Storing JSX code in variables and setting them based on conditions.
+  - Example: <pre>function Message(props) {
+  let messageContent;
+  if (props.isError) {
+    messageContent = <<code>p className="error"</code>>Error: {props.errorMessage}<<code>/p</code>>;
+  } else {
+    messageContent = <<code>p className="success" </code>>Success: {props.successMessage}<<code>/p</code>>;
+  }
+  return (
+    <<code>div</code>>
+      {messageContent}
+    <<code>/div</code>>
+  );
+}</pre>
 
