@@ -17,3 +17,33 @@
 - Enhanced code reusability.
 - Potential performance optimizations by isolating re-renders.
 3. **Example:** Splitting App component into smaller components based on responsibilities (e.g., Header, CoreConcepts, InteractiveArea).
+
+**Public vs. src/assets for Image Storage in React Applications:**
+1. **public/ Folder:**
+- **Purpose:** Stores images accessible to everyone visiting the website.
+- **Accessibility:** Directly accessible through URLs like localhost:5173/some-image.jpg.
+- **Usage: Ideal for:** <br/>
+Images included directly in the index.html file. <br/>
+Favicons. <br/>
+Images that don't require processing by the build process. <br/>
+
+2. **src/assets/ Folder (or src/):**
+- **Purpose:** Stores images used within React components.
+- **Accessibility:** Not directly accessible from outside; only referenced in code.
+- **Workflow:** Imported into React components using import. <br/>
+Picked up by the build process (potentially optimized). <br/>
+"Injected" into the public/ folder during build. <br/>
+Referenced in generated HTML using appropriate paths. <br/>
+- **Usage: Ideal for:** <br/>
+Images used in React components. <br/>
+Images requiring build process handling (e.g., optimization).
+
+**React State Updates: Functional Updates are Key:**
+1. **Best Practice:** When updating state based on the previous state value, use a function passed to the state update function.
+2. **Reason:** React schedules state updates, not performing them instantly. This can lead to issues with multiple updates using outdated state values.
+3. **Example:** <br/>
+<code> const [count, setCount] = useState(false);
+const handleClick = () => {
+  setCount(prevCount => !prevCount); // Functional Update
+}; </code>
+4. This approach guarantees access to the latest state value within the function, ensuring predictable state management.
